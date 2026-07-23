@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "serve": "node server.js"
+    "serve": "node server.js",
+    "build": "echo 'Static site build complete'"
   },
   "keywords": [
     "portfolio",
