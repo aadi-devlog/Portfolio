@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ADI. — Creative Developer &amp; Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=contact-fix-1"/>
+</head>
+<body>
+
+  <!-- ░░ NAV ░░ -->
+  <nav class="nav" style="animation:fadeUp .6s ease forwards">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo shimmer-text">AD.</a>
+      <div class="nav-links">
+        <a href="#about"   class="nav-link">About</a>
+        <a href="#work"    class="nav-link">Work</a>
+        <a href="#skills"  class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="#about"   class="nav-link">About</a>
+      <a href="#work"    class="nav-link">Work</a>
+      <a href="#skills"  class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ░░ HERO ░░ -->
+  <section class="hero">
+    <div class="grid-overlay"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-content">
+      <p class="hero-tag">Creative Developer &amp; Designer</p>
+      <h1 class="hero-title syne">
+        <span class="hero-title-line">I build</span>
+        <span class="hero-title-line shimmer-text">digital</span>
+        <span class="hero-title-line">experiences.</span>
+      </h1>
+      <p class="hero-desc">Crafting immersive web experiences through clean code, bold design, and thoughtful interaction.</p>
+      <div class="hero-cta">
+        <a href="#work" class="hero-cta-link">
+          View my work
+          <svg class="arrow-bounce" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ ABOUT ░░ -->
+  <section id="about" class="about">
+    <div class="container about-grid">
+      <div class="reveal-left">
+        <p class="section-tag">About</p>
+        <h2 class="syne section-title">Designing with purpose,<br/><span class="text-gradient">building with passion.</span></h2>
+      </div>
+      <div class="reveal-right" style="transition-delay:.2s">
+        <p class="about-text">I'm a developer and designer creating beautiful and functional digital experiences.</p>
+        <div class="about-stats">
+          <div class="reveal-scale stat" style="transition-delay:.4s"><p class="stat-num syne shimmer-text">5+</p><p class="stat-label">Projects</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ WORK / 3-D CAROUSEL ░░ -->
+  <section id="work" class="work">
+    <div class="container">
+      <div class="reveal work-header">
+        <p class="section-tag">Selected Work</p>
+        <h2 class="syne section-title">Featured Projects</h2>
+        <p class="work-hint">&larr; Drag to explore &rarr;</p>
+      </div>
+    </div>
+    <div class="carousel-scene reveal" id="carouselScene">
+      <div class="dragon-center">
+        <img src="assets/dragon.png" alt="Chinese Dragon"/>
+      </div>
+      <div class="orbit-ring"></div>
+      <div class="orbit-ring-2"></div>
+      <div id="particles"></div>
+      <div class="carousel-ring" id="carouselRing"></div>
+    </div>
+  </section>
+
+  <!-- ░░ SKILLS ░░ -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="reveal skills-header">
+        <p class="section-tag">Expertise</p>
+        <h2 class="syne section-title">Skills &amp; Tools</h2>
+      </div>
+      <div class="skills-pills" id="skillsPills"></div>
+    </div>
+  </section>
+
+  <!-- ░░ CONTACT ░░ -->
+  <section id="contact" class="contact">
+    <div class="container text-center">
+      <div class="reveal">
+        <p class="section-tag">Get in Touch</p>
+        <h2 class="syne contact-title">Let's work<br/><span class="shimmer-text">together.</span></h2>
+        <p class="contact-desc">Have a project in mind? Let's create something extraordinary.</p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=as59897612@gmail.com" id="contactBtn" target="_blank" rel="noopener noreferrer" class="contact-btn syne">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Say Hello
+        </a>
+        <div class="social-links">
+          <a href="https://github.com/aadi-devlog" id="githubLink" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/aditya-singh-4364663a6/" id="linkedinLink" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+            </svg>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=as59897612@gmail.com" id="emailLink" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Email">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">&copy; 2026 JD. All rights reserved.</footer>
+
+  <!-- ░░ PROJECT DETAIL OVERLAY ░░ -->
+  <div class="project-overlay" id="projectOverlay">
+    <nav class="nav" style="position:absolute;top:0;left:0;right:0">
+      <div class="nav-inner">
+        <button class="nav-logo shimmer-text" id="overlayBackLogo"
+          style="background:none;border:none;cursor:pointer;font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700">AD.</button>
+        <button class="overlay-back-btn" id="overlayBackBtn">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+          </svg>
+          All Projects
+        </button>
+      </div>
+    </nav>
+    <div class="project-overlay-content" id="projectOverlayContent"></div>
+  </div>
+
+  <script src="script.js?v=contact-fix-1"></script>
+</body>
+</html>
+
+
+
+
+
+

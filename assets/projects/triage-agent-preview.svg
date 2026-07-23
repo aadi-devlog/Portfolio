@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#071214"/>
+      <stop offset="0.55" stop-color="#10141f"/>
+      <stop offset="1" stop-color="#050607"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#38e8d2"/>
+      <stop offset="1" stop-color="#8ef7ff"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <g opacity=".18">
+    <path d="M0 120h1280M0 240h1280M0 360h1280M0 480h1280M0 600h1280M160 0v720M320 0v720M480 0v720M640 0v720M800 0v720M960 0v720M1120 0v720" stroke="#38e8d2" stroke-width="1"/>
+  </g>
+  <circle cx="1020" cy="140" r="210" fill="#38e8d2" opacity=".08" filter="url(#glow)"/>
+  <rect x="86" y="72" width="1108" height="576" rx="24" fill="#080d12" stroke="#1d3b40" stroke-width="2"/>
+  <rect x="86" y="72" width="1108" height="58" rx="24" fill="#111821"/>
+  <circle cx="126" cy="102" r="8" fill="#ff5f56"/>
+  <circle cx="154" cy="102" r="8" fill="#ffbd2e"/>
+  <circle cx="182" cy="102" r="8" fill="#27c93f"/>
+  <text x="226" y="108" fill="#82919b" font-family="Consolas, monospace" font-size="18">ai-support-triage-system / output.csv</text>
+  <text x="126" y="184" fill="url(#accent)" font-family="Consolas, monospace" font-size="42" font-weight="700">AI Support Triage System</text>
+  <text x="126" y="226" fill="#cfe6e8" font-family="Consolas, monospace" font-size="22">Classify → Detect Risk → Retrieve Grounded Response</text>
+  <g font-family="Consolas, monospace" font-size="20">
+    <text x="126" y="300" fill="#38e8d2">ticket_id</text>
+    <text x="278" y="300" fill="#38e8d2">category</text>
+    <text x="456" y="300" fill="#38e8d2">priority</text>
+    <text x="626" y="300" fill="#38e8d2">response_source</text>
+    <text x="126" y="352" fill="#f4f7f7">1042</text>
+    <text x="278" y="352" fill="#cfe6e8">account</text>
+    <text x="456" y="352" fill="#ffcc66">high</text>
+    <text x="626" y="352" fill="#cfe6e8">corpus / claude.txt</text>
+    <text x="126" y="404" fill="#f4f7f7">1043</text>
+    <text x="278" y="404" fill="#cfe6e8">billing</text>
+    <text x="456" y="404" fill="#7bf7c3">normal</text>
+    <text x="626" y="404" fill="#cfe6e8">corpus / visa.txt</text>
+    <text x="126" y="456" fill="#f4f7f7">1044</text>
+    <text x="278" y="456" fill="#cfe6e8">technical</text>
+    <text x="456" y="456" fill="#ffcc66">high</text>
+    <text x="626" y="456" fill="#cfe6e8">corpus / hackerrank.txt</text>
+  </g>
+  <rect x="126" y="522" width="960" height="2" fill="#1d3b40"/>
+  <text x="126" y="578" fill="#82919b" font-family="Consolas, monospace" font-size="20">Reliable, explainable support automation without random answers.</text>
+</svg>
