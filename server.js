@@ -43,7 +43,7 @@ function validateStartupEnvironment() {
     { relative: 'index.html', label: 'Main HTML Template' },
     { relative: 'script.js', label: 'Application Logic & Data' },
     { relative: 'style.css', label: 'Design System & Styles' },
-    { relative: 'assets/dragon.png', label: 'Carousel Hero Asset' },
+    { relative: 'assets/dragon.svg', label: 'Carousel Hero Asset' },
     { relative: 'assets/projects', label: 'Projects Asset Directory' }
   ];
 
