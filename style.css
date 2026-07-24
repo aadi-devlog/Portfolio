@@ -245,8 +245,8 @@ img { display: block; max-width: 100%; }
 .card-desc { font-size:.75rem; color:var(--muted-foreground); line-height:1.4; }
 .carousel-card:hover { border-color:hsl(174 72% 56%/.5); box-shadow:0 0 30px -5px hsl(174 72% 56%/.3),0 20px 50px -15px hsl(0 0% 0%/.5); }
 .dragon-center { position:absolute; top:50%;left:50%; transform:translate(-50%,-50%); z-index:1; pointer-events:none; }
-/* Fluid dragon size: minimum 320px, scales with viewport, maximum 900px. */
-.dragon-center img { width:clamp(320px,72vw,900px);height:clamp(320px,72vw,900px);object-fit:contain; transform-origin:center center; animation:dragonBreathing 2.8s ease-in-out infinite; will-change:transform,filter; }
+/* Hero dragon scale: minimum 680px to maintain desktop visual presence and dominance across mobile, tablet, and desktop viewports. */
+.dragon-center img { width:clamp(680px,80vw,1050px);height:clamp(680px,80vw,1050px);object-fit:contain; transform-origin:center center; animation:dragonBreathing 2.8s ease-in-out infinite; will-change:transform,filter; }
 .orbit-ring { position:absolute;top:50%;left:50%;transform:translate(-50%,-50%); width:600px;height:600px; border-radius:50%; border:1px solid hsl(174 72% 56%/.1); pointer-events:none; }
 .orbit-ring-2 { position:absolute;top:50%;left:50%; width:650px;height:650px; border-radius:50%; border:1px dashed hsl(174 72% 56%/.05); pointer-events:none; animation:orbSpin 40s linear infinite reverse; margin-left:-325px;margin-top:-325px; }
 .particle { position:absolute; width:3px;height:3px; border-radius:50%; background:var(--primary); animation:particleDrift 3s ease-in-out infinite; pointer-events:none; }
@@ -310,7 +310,6 @@ img { display: block; max-width: 100%; }
   .card-desc{font-size:.65rem}
   .orbit-ring{width:380px;height:380px}
   .orbit-ring-2{width:420px;height:420px;margin-left:-210px;margin-top:-210px}
-  .dragon-center img{width:clamp(340px,85vw,550px);height:clamp(340px,85vw,550px)}
   .project-grid{grid-template-columns:1fr;gap:2rem}
 }
 @media(max-width:480px){
