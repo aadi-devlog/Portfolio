@@ -223,7 +223,13 @@ img { display: block; max-width: 100%; }
 .work { padding:5rem 0; position:relative; overflow:hidden; }
 .work-header { margin-bottom:1rem; text-align:center; }
 .work-hint { color:var(--muted-foreground); font-size:.875rem; margin-top:.75rem; }
-.carousel-scene { perspective:1200px; width:100%; height:700px; position:relative; display:flex; align-items:center; justify-content:center; user-select:none; cursor:grab; }
+.hint-touch { display: none; }
+.hint-desktop { display: inline; }
+@media (pointer: coarse), (hover: none) {
+  .hint-touch { display: inline; }
+  .hint-desktop { display: none; }
+}
+.carousel-scene { perspective:1200px; width:100%; height:700px; position:relative; display:flex; align-items:center; justify-content:center; user-select:none; cursor:grab; touch-action:pan-y; }
 .carousel-scene.grabbing { cursor:grabbing; }
 .carousel-ring { position:absolute; width:100%;height:100%; transform-style:preserve-3d; z-index:20; will-change:transform; }
 .carousel-card { position:absolute; width:200px;height:290px; left:50%;top:50%; margin-left:-100px;margin-top:-145px; background:hsl(220 18% 8%/.85); border:1px solid var(--border); border-radius:16px; display:flex; flex-direction:column; overflow:hidden; cursor:pointer; transition:box-shadow .4s ease,border-color .4s ease; backface-visibility:hidden; }
@@ -302,8 +308,9 @@ img { display: block; max-width: 100%; }
   .card-thumbnail{height:80px}
   .card-title{font-size:.85rem}
   .card-desc{font-size:.65rem}
-.orbit-ring{width:380px;height:380px}
+  .orbit-ring{width:380px;height:380px}
   .orbit-ring-2{width:420px;height:420px;margin-left:-210px;margin-top:-210px}
+  .dragon-center img{width:clamp(340px,85vw,550px);height:clamp(340px,85vw,550px)}
   .project-grid{grid-template-columns:1fr;gap:2rem}
 }
 @media(max-width:480px){

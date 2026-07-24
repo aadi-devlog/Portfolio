@@ -199,35 +199,44 @@ scene.addEventListener('pointerdown', e => {
   const card = e.target.closest('.carousel-card');
   activeCardSlug = card?.dataset.slug || null;
   didOpenFromPointer = false;
-  isDragging = true; lastX = e.clientX; dragDistance = 0; velocity = 0;
+  isDragging = true;
+  lastX = e.clientX;
+  dragDistance = 0;
+  velocity = 0;
   cancelAnimationFrame(animFrame);
   scene.classList.add('grabbing');
   scene.setPointerCapture(e.pointerId);
 });
+
 scene.addEventListener('pointermove', e => {
   if (!isDragging) return;
   const dx = e.clientX - lastX;
   dragDistance += Math.abs(dx);
-  velocity = velocity * 0.4 + (dx * 0.3) * 0.6; rotation += dx * 0.3; lastX = e.clientX;
+  velocity = velocity * 0.5 + (dx * 0.28) * 0.5;
+  rotation += dx * 0.28;
+  lastX = e.clientX;
   applyRotation();
 });
+
 scene.addEventListener('pointerup', e => stopDrag(e));
 scene.addEventListener('pointercancel', e => stopDrag(e));
+scene.addEventListener('pointerleave', e => { if (isDragging) stopDrag(e); });
+
 scene.addEventListener('click', e => {
   if (didOpenFromPointer || dragDistance > 6) return;
   const card = e.target.closest('.carousel-card');
   if (card?.dataset.slug) openProject(card.dataset.slug);
 });
-scene.addEventListener('pointerleave', stopDrag);
 
 function stopDrag(e) {
   if (e && scene.hasPointerCapture && scene.hasPointerCapture(e.pointerId)) {
-    scene.releasePointerCapture(e.pointerId);
+    try { scene.releasePointerCapture(e.pointerId); } catch (_) {}
   }
   if (!isDragging) return;
   const shouldOpen = activeCardSlug && dragDistance <= 6;
   isDragging = false;
   scene.classList.remove('grabbing');
+
   if (shouldOpen) {
     didOpenFromPointer = true;
     openProject(activeCardSlug);
@@ -235,15 +244,16 @@ function stopDrag(e) {
     return;
   }
   activeCardSlug = null;
+
   const dec = () => {
-    velocity *= 0.95;
-    if (Math.abs(velocity) > 0.05) {
+    velocity *= 0.94;
+    if (Math.abs(velocity) > 0.02) {
       rotation += velocity;
       applyRotation();
       animFrame = requestAnimationFrame(dec);
     }
   };
-  dec();
+  animFrame = requestAnimationFrame(dec);
 }
 
 /* ===== SKILLS PILLS ===== */
