@@ -93,10 +93,10 @@ const projects = [
     slug: 'triage-agent',
     title: 'AI Support Triage System',
     category: 'AI Workflow',
-    description: 'A deterministic support-ticket classification pipeline.',
+    description: 'A terminal-based AI support-ticket classification pipeline.',
     image: 'assets/projects/triage-agent-preview.svg',
-    fullDescription: 'This project is a hybrid AI-based support ticket triage system that classifies, prioritizes, and responds to user queries using retrieval-based logic and rule-based decision making. It was built as a HackerRank Hackathon project with reliability and explainability as the central goal.',
-    blogIntro: 'The triage agent is different from the frontend projects: it is a backend-style automation pipeline. Instead of generating random answers, it follows a grounded flow: classify the ticket, detect risk, retrieve the most relevant corpus response, and write the result to an output CSV.',
+    fullDescription: 'This project is a terminal-based AI support ticket triage system that classifies, prioritizes, and responds to user queries using retrieval-based logic and rule-based decision making. It was built as a HackerRank Hackathon project with reliability and explainability as the central goal.',
+    blogIntro: 'The triage agent is different from the frontend projects: it is a terminal-based automation pipeline. Instead of generating random answers, it follows a grounded flow: classify the ticket, detect risk, retrieve the most relevant corpus response, and write the result to an output CSV.',
     highlights: [
       'Classifies support tickets into categories such as billing, account, and technical.',
       'Detects high-priority issues including fraud, hacked accounts, and urgent cases.',
