@@ -319,7 +319,7 @@ function renderProject(p) {
   overlayContent.innerHTML = `
     <article class="project-blog">
       <section>
-        <div class="project-hero-wrap">
+        <div class="project-hero-wrap" data-slug="${p.slug}">
           <img src="${p.image}" alt="${p.title} interface screenshot" class="project-hero-img"/>
         </div>
       </section>
